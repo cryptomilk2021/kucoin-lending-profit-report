@@ -8,6 +8,8 @@ Overview
 
 Generate a profit summary of all (or some) Kucoin asset lending activities, has option to dump all lending activities into a .CSV
 
+How it works https://youtu.be/GDcGR2Abcko
+
 Features
 --------
 
