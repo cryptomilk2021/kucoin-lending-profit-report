@@ -27,7 +27,6 @@ if not my_coins:
 for coin in my_coins:
     print(f'processing {coin}')
     response = call_kucookey(coin, 1, 1, credentials) #get number of rows to decide how many pages to ask for
-    # print(response.json())
     temp = response.json()
     if temp['data']['totalNum'] == 0:
         print(f'no lending history for {coin}')
@@ -42,7 +41,6 @@ for coin in my_coins:
         print(f' getting page {i} of {total_nbr_of_pages}')
         response = call_kucookey(coin, i, 50, credentials)
         temp = response.json()
-        # print(temp)
         temp1 = pd.DataFrame(temp['data'])
         final_set = final_set.append(temp1)
         time.sleep(random.randint(10, slow_it_up_to_secs))
