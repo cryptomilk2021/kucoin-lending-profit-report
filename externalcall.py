@@ -100,7 +100,7 @@ def get_last_price(coin, credentials):
     response = requests.request(call_type, url, headers=headers)
 
     temp = response.json()
-    print(response.json())
+    # print(response.json())
     if temp['data'] is None:
         return 0
     else:
